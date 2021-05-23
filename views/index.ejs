@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./layouts/head.ejs') %>
+</head>
+<body>
+    <header>
+        <%- include ('./layouts/header.ejs') %>
+    </header>
+    <main>
+
+
+    <% data.forEach(element => {  %>
+
+        <div class="cards">
+
+            <h3 class="title">Title: <%= element.title%></h3>
+            <h3>Company: <%= element.company%></h3>
+            <h3>Location: <%= element.location%></h3>
+            <a href="<%= element.url%>"><h3><%= element.url%></h3></a>
+
+
+        </div>
+
+    <% }); %>
+
+
+
+    </main>
+
+    <footer>
+        <%- include ('./layouts/footer.ejs') %>
+    </footer>
+    
+</body>
+</html>

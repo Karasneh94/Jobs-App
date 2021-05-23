@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../layouts/head.ejs') %>
+</head>
+<body>
+    <header>
+        <%- include ('../layouts/header.ejs') %>
+    </header>
+    <style>
+        input{
+            display: none;
+        }
+    </style>
+    <main>
+
+
+    <% data.forEach(element => {  %>
+
+        <div class="cards">
+
+            <h3 class="title">Title: <%= element.title%></h3>
+            <h3>Company: <%= element.company%></h3>
+            <h3>Location: <%= element.location%></h3>
+            <a href="<%= element.url%>"><h3><%= element.url%></h3></a>
+            <form method="POST" action="/details/<%=data.id%>">
+                <input type="text" value="<%= element.title%>" name="title">
+                <input type="text" value="<%= element.company%>" name="company">
+                <input type="text" value="<%= element.location%>" name="location">
+                <input type="text" value="<%= element.url%" name="url">
+    <button type="submit">view details</button>
+            </form>
+
+        </div>
+
+      
+
+    <% }); %>
+
+
+
+    </main>
+
+    <footer>
+        <%- include ('../layouts/footer.ejs') %>
+    </footer>
+    
+</body>
+</html>
