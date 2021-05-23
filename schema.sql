@@ -3,5 +3,5 @@ CREATE TABLE IF NOT EXISTS myList(
     title VARCHAR(255),
     company VARCHAR(255),
     location VARCHAR(255),
-    url VARCHAR(500),
-)
+    url VARCHAR(500)
+);
